@@ -47,15 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountMenu.cs">
+    <Compile Include="AccountMenuAd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>AccountMenu.cs</DependentUpon>
+      <DependentUpon>AccountMenuAd.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Connection.cs" />
-    <Compile Include="Digest.cs" />
+    <Compile Include="packUtils\Digest.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +64,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AccountMenu.resx">
-      <DependentUpon>AccountMenu.cs</DependentUpon>
+    <Compile Include="User\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountMenuAd.resx">
+      <DependentUpon>AccountMenuAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -79,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

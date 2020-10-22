@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PayrollSystem
+namespace PayrollSystem.User
 {
-    public partial class MainTab : Form
+    public partial class UserAdd : Form
     {
-        public MainTab()
+        public UserAdd()
         {
             InitializeComponent();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

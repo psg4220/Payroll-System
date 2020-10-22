@@ -29,77 +29,98 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTab));
-            this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.AccountDashboardTab = new System.Windows.Forms.TabPage();
-            this.InformationTab = new System.Windows.Forms.TabPage();
-            this.InfoNameLabel = new System.Windows.Forms.Label();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            this.tabControlMain.SuspendLayout();
-            this.InformationTab.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolUsersMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeAccountPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlMain
+            // menuStrip1
             // 
-            this.tabControlMain.Controls.Add(this.AccountDashboardTab);
-            this.tabControlMain.Controls.Add(this.InformationTab);
-            this.tabControlMain.Location = new System.Drawing.Point(0, 1);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(483, 461);
-            this.tabControlMain.TabIndex = 0;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolUsersMenu,
+            this.settingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(484, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // AccountDashboardTab
+            // toolUsersMenu
             // 
-            this.AccountDashboardTab.Location = new System.Drawing.Point(4, 22);
-            this.AccountDashboardTab.Name = "AccountDashboardTab";
-            this.AccountDashboardTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AccountDashboardTab.Size = new System.Drawing.Size(475, 435);
-            this.AccountDashboardTab.TabIndex = 0;
-            this.AccountDashboardTab.Text = "Dashboard";
-            this.AccountDashboardTab.UseVisualStyleBackColor = true;
+            this.toolUsersMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addUserToolMenu,
+            this.openToolStripMenuItem});
+            this.toolUsersMenu.Name = "toolUsersMenu";
+            this.toolUsersMenu.Size = new System.Drawing.Size(47, 20);
+            this.toolUsersMenu.Text = "Users";
             // 
-            // InformationTab
+            // addUserToolMenu
             // 
-            this.InformationTab.Controls.Add(this.InfoNameLabel);
-            this.InformationTab.Location = new System.Drawing.Point(4, 22);
-            this.InformationTab.Name = "InformationTab";
-            this.InformationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.InformationTab.Size = new System.Drawing.Size(475, 435);
-            this.InformationTab.TabIndex = 1;
-            this.InformationTab.Text = "Info";
-            this.InformationTab.UseVisualStyleBackColor = true;
+            this.addUserToolMenu.Name = "addUserToolMenu";
+            this.addUserToolMenu.Size = new System.Drawing.Size(180, 22);
+            this.addUserToolMenu.Text = "Add";
+            this.addUserToolMenu.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
-            // InfoNameLabel
+            // openToolStripMenuItem
             // 
-            this.InfoNameLabel.AutoSize = true;
-            this.InfoNameLabel.Location = new System.Drawing.Point(10, 30);
-            this.InfoNameLabel.Name = "InfoNameLabel";
-            this.InfoNameLabel.Size = new System.Drawing.Size(41, 13);
-            this.InfoNameLabel.TabIndex = 0;
-            this.InfoNameLabel.Text = "Name: ";
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeAccountPasswordToolStripMenuItem,
+            this.toolStripMenuItem2});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // changeAccountPasswordToolStripMenuItem
+            // 
+            this.changeAccountPasswordToolStripMenuItem.Name = "changeAccountPasswordToolStripMenuItem";
+            this.changeAccountPasswordToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.changeAccountPasswordToolStripMenuItem.Text = "Change Account Password";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItem2.Text = "Advance Settings";
             // 
             // MainTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.tabControlMain);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainTab";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PayrollSys";
-            this.tabControlMain.ResumeLayout(false);
-            this.InformationTab.ResumeLayout(false);
-            this.InformationTab.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControlMain;
-        private System.Windows.Forms.TabPage AccountDashboardTab;
-        private System.Windows.Forms.TabPage InformationTab;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
-        private System.Windows.Forms.Label InfoNameLabel;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolUsersMenu;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolMenu;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeAccountPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
