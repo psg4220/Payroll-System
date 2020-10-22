@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using PayrollSystem;
 
 namespace PayrollSystem
 {
@@ -15,10 +14,9 @@ namespace PayrollSystem
         private void LoginButton_Click(object sender, EventArgs e)
         {
             Connection con = new Connection();
-            con.dataGet("SELECT * FROM [Users] WHERE username = '"+Usernametxtboxlogin.Text+"' AND password = '"+Passwordtxtboxlogin);
+            con.dataGet("SELECT * FROM [Accounts] WHERE Username = '"+Usernametxtboxlogin.Text+"' AND Password = '"+Passwordtxtboxlogin.Text+"'");
             DataTable dt = new DataTable();
             con.sda.Fill(dt);
-
             if(dt.Rows.Count > 0)
             {
                 this.Hide();
@@ -27,9 +25,8 @@ namespace PayrollSystem
             }
             else
             {
-                MessageBox.Show("Invalid Username or Password!!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Username or Password!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void ButtonCancelLogin_Click(object sender, EventArgs e)
