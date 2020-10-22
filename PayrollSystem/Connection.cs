@@ -32,7 +32,7 @@ namespace PayrollSystem
             catch (Exception e)
             {
 
-                MessageBox.Show("Exception Occured: " + e,"Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Exception Occured at DataSend\nCause: " + e,"Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
 
             }
             con.Close();
@@ -47,7 +47,7 @@ namespace PayrollSystem
             }
             catch (Exception e)
             {
-                MessageBox.Show("Exception Occured: " + e, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Exception Occured at dataGet\nCause: " + e, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
