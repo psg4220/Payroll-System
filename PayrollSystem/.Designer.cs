@@ -1,6 +1,6 @@
 ﻿namespace PayrollSystem
 {
-    partial class MainTab
+    partial class MainTabAd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTab));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainTabAd));
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolUsersMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,14 +63,14 @@
             // addUserToolMenu
             // 
             this.addUserToolMenu.Name = "addUserToolMenu";
-            this.addUserToolMenu.Size = new System.Drawing.Size(180, 22);
+            this.addUserToolMenu.Size = new System.Drawing.Size(103, 22);
             this.addUserToolMenu.Text = "Add";
             this.addUserToolMenu.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // settingsToolStripMenuItem
@@ -94,7 +94,7 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(216, 22);
             this.toolStripMenuItem2.Text = "Advance Settings";
             // 
-            // MainTab
+            // MainTabAd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainTab";
+            this.Name = "MainTabAd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PayrollSys";
             this.menuStrip1.ResumeLayout(false);

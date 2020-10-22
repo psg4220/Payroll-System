@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace PayrollSystem.User
 {
-    public partial class UserAdd : Form
+    public partial class buttonAddRegister : Form
     {
-        public UserAdd()
+        public buttonAddRegister()
         {
             InitializeComponent();
+        }
+
+        private void textBoxUsernameRegister_TextChanged(object sender, EventArgs e)
+        {
+            //username textbox
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //add button 
+        }
+
+        //cancel button
+        private void buttonCancelRegister_Click(object sender, EventArgs e)
+        {
+            MainTabAd mta = new MainTabAd();
+            this.Close();
+            mta.Show();
+            
         }
     }
 }

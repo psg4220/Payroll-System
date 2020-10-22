@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace PayrollSystem
 {
-    public partial class MainTab : Form
+    public partial class MainTabAd : Form
     {
-        public MainTab()
+        public MainTabAd()
         {
             InitializeComponent();
         }
@@ -18,10 +18,10 @@ namespace PayrollSystem
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            User.UserAdd ua = new User.UserAdd();
+            User.buttonAddRegister ua = new User.buttonAddRegister();
             ua.StartPosition = FormStartPosition.CenterScreen;
             ua.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
