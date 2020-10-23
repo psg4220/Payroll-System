@@ -13,10 +13,10 @@ namespace PayrollSystem
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string userHash = Digests.Sha256.applySHA256(Usernametxtboxlogin.Text);
             string passHash = Digests.Sha256.applySHA256(Passwordtxtboxlogin.Text);
             Connection con = new Connection();
-            con.dataGet("SELECT * FROM [Accounts] WHERE Username = '"+userHash+"' AND Password = '"+passHash+"'");
+            con.dataGet("SELECT * FROM [Accounts] WHERE Username = '"+ Usernametxtboxlogin.Text + "' AND Password = '"+passHash+"'");
+            passHash = "";
             DataTable dt = new DataTable();
             con.sda.Fill(dt);
             if(dt.Rows.Count > 0)

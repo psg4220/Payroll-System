@@ -11,17 +11,25 @@ namespace PayrollSystem
             InitializeComponent();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            User.buttonAddRegister ua = new User.buttonAddRegister();
+            User.formAdd ua = new User.formAdd();
             ua.StartPosition = FormStartPosition.CenterScreen;
-            ua.Show();
             this.Hide();
+            ua.Show();
+        }
+
+        private void MainTabAd_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to close this program?","Wait",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+            if(dr == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -12,13 +12,14 @@ namespace PayrollSystem
 
         public void connection()
         {
-            con = new SqlConnection("Data Source=DESKTOP-POG661L;Initial Catalog=localdb;Integrated Security=True");
+            con = new SqlConnection("Data Source=DESKTOP-POG661L;" +
+                                    "Initial Catalog=payrolldb;" +
+                                    "Integrated Security=True");
             con.Open();
         }
 
         public void DataSend(string sql)
         {
-
             try
             {
                 connection();
@@ -46,6 +47,5 @@ namespace PayrollSystem
                 MessageBox.Show("Exception Occured at dataGet\nCause: " + e, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
     }
 }
