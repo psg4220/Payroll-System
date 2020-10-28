@@ -11,15 +11,14 @@ namespace PayrollSystem
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void LoginToDatabase()
         {
             string passHash = Digests.Sha256.applySHA256(Passwordtxtboxlogin.Text);
             Connection con = new Connection();
-            con.dataGet("SELECT * FROM [Accounts] WHERE Username = '"+ Usernametxtboxlogin.Text + "' AND Password = '"+passHash+"'");
-            passHash = "";
+            con.dataGet("SELECT * FROM [Accounts] WHERE username = '" + Usernametxtboxlogin.Text + "' AND password = '" + passHash + "'");
             DataTable dt = new DataTable();
             con.sda.Fill(dt);
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 this.Hide();
                 MainTabAd mt = new MainTabAd();
@@ -31,14 +30,14 @@ namespace PayrollSystem
             }
         }
 
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            LoginToDatabase();
+        }
+
         private void ButtonCancelLogin_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Usernametxtboxlogin_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 
